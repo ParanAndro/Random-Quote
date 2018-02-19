@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+$fonts: Lato, sans-serif;
+
+.columns {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+.background {
+		background-color: #4D4DFF;
+}
+.text {
+	color: white;
+	font-weight: normal;
+}
+
+body {
+font: 100% $fonts;
+	main {
+	@extend .columns;
+	@extend .background;
+	@extend .text;
+	margin: 0 auto;
+	max-width: 600px;
+	border-radius: 5px;
+		div {
+		padding: 30px;
+		}
+		.buttons {
+		@extend .columns;
+			a, .trigger {
+			@extend .background;
+			@extend .text;
+			margin: 10px auto;
+			padding: 5px 0;
+			width: 200px;
+			border: 1px solid white;
+			color: white;
+			}
+			a {
+			text-decoration: none;
+			font-size: 13px;
+			}
+			.trigger {
+			cursor: pointer;
+			}
+		}
+
+	}
+}	
